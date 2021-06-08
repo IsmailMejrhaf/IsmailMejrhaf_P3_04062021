@@ -1,0 +1,79 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  background-color: #f6f6f6;
+  position: relative;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+header {
+  background-color: #fff;
+}
+header .header__block {
+  display: flex;
+  height: 80px;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 5px 2px rgba(0, 0, 0, 0.15);
+}
+
+header .header__block .header__logo {
+  height: 2rem;
+}
+header .header__adresse {
+  background-color: #eaeaea;
+  width: 100%;
+  height: 40px;
+  padding-top: 20px;
+  text-align: center;
+  margin-top: 5px;
+}
+header .header__adresse i {
+  margin-right: 0.5rem;
+}
+
+header .header__adresse {
+  background-color: #eaeaea;
+  width: 100%;
+  height: 40px;
+  padding-top: 20px;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.block__reservation h1,
+.block__reservation p {
+  text-align: center;
+  margin: 0.5rem;
+}
+
+/* Bouton page d'accueil partie réservation */
+.btn {
+  display: block;
+  margin: auto;
+  border-radius: 50px;
+  border-style: none;
+  background: linear-gradient(#ff79da, #9356dc);
+  box-shadow: 0px 4px 5px 2px rgba(0, 0, 0, 0.15);
+  width: 230px;
+  height: 50px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 300ms;
+}
+.btn:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+  box-shadow: 0px 4px 5px 2px rgba(0, 0, 0, 0.5);
+}
