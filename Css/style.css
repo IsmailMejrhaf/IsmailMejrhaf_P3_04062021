@@ -1,3 +1,12 @@
+@charset "UTF-8";
+.box,
+.footer__line,
+.footer__container,
+.loader .loader__letters {
+  display: flex;
+  flex-direction: row;
+}
+
 html,
 body {
   margin: 0;
@@ -5,6 +14,11 @@ body {
   max-width: 100%;
   background-color: #f6f6f6;
   position: relative;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
 }
 
 body {
@@ -15,48 +29,7 @@ h1 {
   font-size: 1.5rem;
 }
 
-header {
-  background-color: #fff;
-}
-header .header__block {
-  display: flex;
-  height: 80px;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0px 4px 5px 2px rgba(0, 0, 0, 0.15);
-}
-
-header .header__block .header__logo {
-  height: 2rem;
-}
-header .header__adresse {
-  background-color: #eaeaea;
-  width: 100%;
-  height: 40px;
-  padding-top: 20px;
-  text-align: center;
-  margin-top: 5px;
-}
-header .header__adresse i {
-  margin-right: 0.5rem;
-}
-
-header .header__adresse {
-  background-color: #eaeaea;
-  width: 100%;
-  height: 40px;
-  padding-top: 20px;
-  text-align: center;
-  margin-top: 5px;
-}
-
-.block__reservation h1,
-.block__reservation p {
-  text-align: center;
-  margin: 0.5rem;
-}
-
-/* Bouton page d'accueil partie réservation */
+/* Bouton pour faire la réservation */
 .btn {
   display: block;
   margin: auto;
@@ -76,4 +49,361 @@ header .header__adresse {
   transform: scale(1.1);
   opacity: 0.8;
   box-shadow: 0px 4px 5px 2px rgba(0, 0, 0, 0.5);
+}
+
+.card__heart {
+  float: right;
+  position: relative;
+  bottom: 50px;
+  right: 30px;
+  padding-right: 20px;
+  font-size: 1.6rem;
+}
+.card__heart .heart {
+  position: absolute;
+}
+.card__heart .heart2 {
+  width: 35px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  visibility: hidden;
+}
+.card__heart:hover :first-child {
+  visibility: hidden;
+}
+.card__heart:hover :nth-child(2) {
+  visibility: visible;
+  background: linear-gradient(#ff79da, #9356dc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-animation: fill 1s;
+  -webkit-animation: fill 1s;
+  animation: fill linear 1s;
+}
+
+/* Pour les icone en forme de coeur */
+.card__heart--menus {
+  bottom: 15px;
+  margin-left: 30px;
+}
+
+@keyframes fill {
+  0% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.loader {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #353535;
+  z-index: 5;
+  animation: fade-in 3s ease-out normal forwards;
+}
+.loader .loader__letters {
+  position: fixed;
+  width: 100%;
+  justify-content: center;
+  top: 50%;
+}
+.loader .loader__letters .letter {
+  font-size: 3rem;
+  font-family: "Shrikhand", cursive;
+  animation: letters 0.8s linear 2;
+}
+.loader .loader__letters .letter.letter1 {
+  color: #9356dc;
+  animation-delay: 0.1s;
+}
+.loader .loader__letters .letter.letter2 {
+  color: #ff79da;
+  animation-delay: 0.2s;
+}
+.loader .loader__letters .letter.letter3 {
+  color: #99e2d0;
+  animation-delay: 0.3s;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+  }
+}
+@keyframes letters {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+  }
+}
+.header-block {
+  background-color: #fff;
+}
+.header-block .header__box {
+  display: flex;
+  height: 80px;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 5px 2px rgba(0, 0, 0, 0.15);
+}
+.header-block .header__box .header__logo {
+  height: 2rem;
+}
+.header-block .header__adresse {
+  background-color: #eaeaea;
+  width: 100%;
+  height: 40px;
+  padding-top: 20px;
+  text-align: center;
+  margin-top: 5px;
+}
+.header-block .header__adresse i {
+  margin-right: 0.5rem;
+}
+
+/*POUR LES PAGES MENU*/
+/*HEADER*/
+.arrow {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 20px;
+  margin: 30px;
+}
+
+.footer {
+  background-color: #353535;
+  height: 220px;
+  margin-top: 3rem;
+}
+.footer p {
+  margin: 0;
+}
+.footer a {
+  color: #fff;
+}
+.footer__container {
+  justify-content: space-around;
+}
+.footer__logo {
+  text-align: center;
+  padding-top: 0.5rem;
+}
+.footer__title {
+  color: #fff;
+  font-family: "Shrikhand", cursive;
+  font-size: 2em;
+}
+.footer__line {
+  padding-top: 0.5rem;
+}
+.footer__line i {
+  margin-right: 1rem;
+  color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .footer__title {
+    margin: 1rem;
+    text-align: start;
+    font-size: 1.5em;
+    padding: 0;
+  }
+  .footer__container {
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding-left: 1.2rem;
+  }
+}
+main {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.block__reservation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+}
+.block__reservation h1,
+.block__reservation p {
+  text-align: center;
+  margin: 0.5rem;
+}
+.block__reservation button {
+  margin: 1rem;
+}
+
+.container__operation {
+  background: #fff;
+  height: 350px;
+  margin-bottom: 5rem;
+}
+.container__operation__title {
+  text-align: center;
+  padding: 1rem;
+}
+
+.box {
+  justify-content: space-evenly;
+}
+.box__container {
+  display: flex;
+  flex-direction: column;
+  background-color: #f6f6f6;
+  width: 15rem;
+  height: 150px;
+  padding-top: 2rem;
+  border-radius: 25px;
+  text-align: center;
+  font-size: 1.5rem;
+  box-shadow: 0px 4px 5px 2px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: transform 300ms;
+}
+.box__container:hover {
+  transform: scale(1.1);
+  background: linear-gradient(#ff79da, #9356dc);
+  color: #fff;
+}
+.box__number {
+  background-color: #9356dc;
+  color: #fff;
+  width: 30px;
+  border-radius: 50%;
+  align-self: center;
+  font-weight: lighter;
+}
+.box i {
+  display: none;
+  visibility: hidden;
+}
+
+/* Pour cacher les icônes */
+@media screen and (min-width: 768px) {
+  .box__icon {
+    visibility: hidden;
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container__operation {
+    height: 500px;
+  }
+  .container__operation .box {
+    flex-direction: column;
+    align-items: center;
+  }
+  .container__operation .box__container {
+    margin: 0.8rem 0.8rem 0.8rem 1.3rem;
+    height: 80px;
+    width: 90%;
+    flex-direction: row;
+    padding: 0;
+    align-items: center;
+  }
+  .container__operation .box__container:hover {
+    transform: scale(1);
+    background: #e4d5f6;
+    color: #000;
+  }
+  .container__operation .box__container:hover .box__icon {
+    color: #9356dc;
+  }
+  .container__operation .box__number {
+    margin-left: -1rem;
+  }
+  .container__operation .box__icon {
+    color: grey;
+    margin: 1rem;
+    display: inline-block;
+    visibility: visible;
+  }
+  .container__operation .box__text {
+    margin: 15px;
+  }
+}
+/* PARTIE RESTAURANTS */
+.container__card {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-between;
+}
+.container__card__title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.card {
+  background: #fff;
+  width: 45%;
+  height: 360px;
+  border-radius: 15px;
+  margin-bottom: 50px;
+  box-shadow: 0px 4px 5px 2px rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+.card__img {
+  height: 80%;
+}
+.card__img .restaurant-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.card__infos {
+  margin-left: 20px;
+}
+.card__infos h3,
+.card__infos p {
+  margin: 10px 0px 10px 0px;
+}
+.card__new {
+  width: 80px;
+  padding: 10px;
+  text-align: center;
+  display: inline-block;
+  color: #217460;
+  background-color: #99e2d0;
+  border-radius: 3px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 20px;
+}
+
+/* Pour Laptop L */
+@media screen and (max-width: 1440px) {
+  .container__card {
+    margin: 0 1rem 0 1rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container__card {
+    flex-direction: column;
+  }
+
+  .card {
+    width: 90%;
+  }
 }
