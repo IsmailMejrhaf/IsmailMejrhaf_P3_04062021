@@ -481,7 +481,7 @@ main {
   font-weight: lighter;
   margin-top: 1rem;
 }
-.menus__border {
+.menus__line {
   border-bottom: 3px solid #99e2d0;
   width: 40px;
   margin-bottom: 1rem;
@@ -604,7 +604,7 @@ main {
   .menus__box .menus__titles {
     text-align: center;
   }
-  .menus__box .menus__border {
+  .menus__box .menus__line {
     width: 100%;
     border-radius: 25%;
   }
